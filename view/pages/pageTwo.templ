@@ -1,0 +1,13 @@
+package pages
+
+import "my-go-app/view/layout"
+
+templ PageTwo() {
+    @layout.Index() {
+        <div class="w-screen flex justify-center h-full font-mono p-7 flex-wrap gap-3">
+        <div id="pool-card-container" hx-get="/pool-cards" hx-trigger="load" hx-target="#pool-card-container" class="w-full h-full overflow-y-auto flex flex-wrap gap-3">
+        <!-- Initial set of cards will be inserted here -->
+    </div>
+    </div>
+    }
+}

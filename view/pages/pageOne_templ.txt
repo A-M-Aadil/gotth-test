@@ -1,0 +1,1 @@
+<div class=\"w-screen flex justify-center h-full font-mono p-7 flex-wrap gap-3\"><div id=\"card-container\" hx-get=\"/cards\" hx-trigger=\"load\" hx-target=\"#card-container\" class=\"w-full h-full overflow-y-auto flex flex-wrap gap-3\"><!-- Initial set of cards will be inserted here --></div></div>

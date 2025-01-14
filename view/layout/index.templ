@@ -1,0 +1,29 @@
+package layout
+
+templ Index() {
+	<html>
+		<head>
+			<script src="https://cdn.tailwindcss.com"></script>
+            <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.8.3/dist/htmx.min.js"></script>
+		</head>
+		<body class="bg-black overflow-hidden h-screen w-full">
+			<div class="w-screen px-5 py-4 bg-black font-mono text-white flex items-center justify-between">
+				<div>
+					<h1 class="text-2xl font-bold">My Go App</h1>
+				</div>
+				<div class="flex flex-row gap-2">
+					<a href="/page-one" class="w-[100px] border-[2px] border-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out text-white px-3 py-2">
+						Page One
+					</a>
+					<a href="/page-two" class="w-[100px] border-[2px] border-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out text-white px-3 py-2">
+						Page two
+					</a>
+				</div>
+				<div>
+					<a href="/user" class="text-pink-800 font-semibold">powerd by GOTTH</a>
+				</div>
+			</div>
+			{ children... }
+		</body>
+	</html>
+}

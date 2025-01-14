@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*
+ css:
+ tailwindcss -i view/css/app.css -o public/styles.css --watch
+*/

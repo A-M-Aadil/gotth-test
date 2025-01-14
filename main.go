@@ -1,6 +1,7 @@
 package main
 
 import (
+	"my-go-app/data"
 	handlers "my-go-app/handler"
 	"net/http"
 
@@ -25,7 +26,12 @@ func main() {
 	router := chi.NewMux()
 
 	//router.Get("/", handleLandingPage)
-	router.Get("/", handlers.HandleLandingPage)
+	router.Get("/", handlers.Make(handlers.HandleLandingPage))
+	router.Get("/page-one", handlers.Make(handlers.HandlePageOne))
+	router.Get("/page-two", handlers.Make(handlers.HandlePageTwo))
+	router.Get("/cards", data.LoadUserCardsPartial)
+	router.Get("/pool-cards", data.SyncPoolLoadUserCardsPartial)
+
 	// Serve static HTML file (index.html)
 	// http.HandleFunc("/", serveHTML) // This serves the index.html file from the public folder
 
